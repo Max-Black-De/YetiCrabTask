@@ -1,0 +1,32 @@
+.inputForm {
+  width: 30%;
+}
+
+.library {
+  width: 55%
+}
+
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+button {
+  width: 83px;
+  height: 31px;
+}
+
+
+.client-name {
+  display: flex;
+}
+
+.editor-container {
+  display: flex;
+  align-items: center;
+}
