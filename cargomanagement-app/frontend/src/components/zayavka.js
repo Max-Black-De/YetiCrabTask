@@ -7,18 +7,9 @@ import AtiEditor from './EditForms/atiEditor';
 
 let Zayavka = (props) => {
 
-    const { dateTime, zayavkaNumber } = props.details
 
     return (
         <li className="zayavka">
-            <div className="zayavka-number">
-                Заявка № {zayavkaNumber}
-            </div>
-
-            <div className="date-time">
-                {dateTime}
-            </div>
-
             <div className="client-name">
                 <ClientEditor
                     key={props.key}

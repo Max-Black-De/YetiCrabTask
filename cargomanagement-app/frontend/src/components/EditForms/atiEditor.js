@@ -20,10 +20,12 @@ let AtiEditor = (props) => {
 
     return (
         <div className="editor-container">
-            <a href= {`https://ati.su/firms/${atiCode}/info`}>Информация по АТИ</a>
+            <a className="limited-width"
+            href= {`https://ati.su/firms/${atiCode}/info`}>Информация по АТИ</a>
 
             {display ? <div className="editor">
                 <input
+                    className="width-input"
                     onChange={handleChange}
                     value={props.zayavka.atiCode}
                     type="text"

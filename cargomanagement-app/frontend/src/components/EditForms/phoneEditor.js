@@ -20,9 +20,10 @@ let PhoneEditor = (props) => {
 
     return (
         <div className="editor-container">
-            <p>{carrierPhone}</p>
+            <div className="limited-width">{carrierPhone}</div>
             {display ? <div className="editor">
                 <input
+                    className="width-input"
                     onChange={handleChange}
                     value={props.zayavka.carrierPhone}
                     type="text"

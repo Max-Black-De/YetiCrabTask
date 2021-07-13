@@ -20,9 +20,10 @@ let CarrierEditor = (props) => {
 
     return (
         <div className="editor-container">
-            <p>{carrierName}</p>
+            <div className="limited-width">{carrierName}</div>
             {display ? <div className="editor">
                 <input
+                    className="width-input"
                     onChange={handleChange}
                     value={props.zayavka.carrierName}
                     type="text"

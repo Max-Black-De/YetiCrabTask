@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 let ClientEditor = (props) => {
 
-    const { clientName } = props.details
+    const { clientName, dateTime, zayavkaNumber } = props.details
     const [display, toogleDisplay] = useState(false);
     const [value, changeValue] = useState(false);
     const handleChange = event => {
@@ -19,22 +19,32 @@ let ClientEditor = (props) => {
     }
 
     return (
-        <div className="editor-container">
-            <div>{clientName}</div>
-            {display ? <div className="editor">
-                <input
-                    onChange={handleChange}
-                    value={props.zayavka.clientName}
-                    type="text"
-                    name="clientName" ></input>
-            </div> : null
-            }
-            <div className="btn">
-                <button
-                    onClick={handleHideEditor}
-                    className="btn-edit" >{!value ? 'Изменить' : 'Сохранить'}</button>
+        <div className="block">
+            <div className="number-of-zayavka">
+                Заявка № {zayavkaNumber}
+            </div>
+            <div className="date-time">
+                {dateTime}
             </div>
 
+            <div className="editor-container">
+                <div className="limited-width">{clientName}</div>
+                {display ? <div className="editor">
+                    <input
+                        className="width-input"
+                        onChange={handleChange}
+                        value={props.zayavka.clientName}
+                        type="text"
+                        name="clientName" ></input>
+                </div> : null
+                }
+                <div className="btn">
+                    <button
+                        onClick={handleHideEditor}
+                        className="btn-edit" >{!value ? 'Изменить' : 'Сохранить'}</button>
+                </div>
+
+            </div>
         </div>
     );
 

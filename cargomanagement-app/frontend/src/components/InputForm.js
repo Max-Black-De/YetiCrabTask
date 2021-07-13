@@ -26,59 +26,60 @@ class InputForm extends React.Component {
 
   render() {
     return (
-      <div className="input">
+      <div className="input-container">
         <form className="input-form"
-        onSubmit={this.createOrder}
+          onSubmit={this.createOrder}
         >
-          <div>
+          <div className="zayavka-number">
             <label>Заявка № </label>
             <input className="zayavkaNumber"
-            ref={this.newElementNumber}></input>
+              ref={this.newElementNumber}></input>
           </div>
 
           <div className="curentTime">
             <label>Дата и время: </label>
           </div>
 
-          <div>
+          <div className="name-of-client">
             <label>Название фирмы клиента </label>
             <input
-              className="name-of-client"
+              className="nameOfClient"
               ref={this.newElementClient} />
           </div>
 
-          <div>
+          <div className="name-of-carrier">
             <label>ФИО перевозчика </label>
             <input
-              className="name-of-carrier"
+              className="nameOfCarrier"
               ref={this.newElementName} />
           </div>
 
-          <div>
+          <div className="phone-of-carrier">
             <label>Контактный телефон перевозчика </label>
             <input
-              className="phone-of-carrier"
+              className="phoneOfCarrier"
               type="tel"
               ref={this.newElementPhone} />
           </div>
 
-          <div>
+          <div className="comment-for-zayavka">
             <label>Комментарии </label>
             <textarea
-              className="comment"
+              className="commentForZayavka"
               ref={this.newElementComment} />
           </div>
 
-          <div>
+          <div className="ati-cod-of-carrier">
             <label>ATI код сети перевозчика </label>
             <input
-              className="ati-cod-of-carrier"
+              className="atiCodOfCarrier"
               ref={this.newElementAti} />
           </div>
-
-          <button className="add-zayavka">
-            Добавить компанию
-          </button>
+          <div className="add-btn-container">
+            <button className="btn-add-zayavka">
+              Добавить заявку
+            </button>
+          </div>
         </form>
       </div>
     )

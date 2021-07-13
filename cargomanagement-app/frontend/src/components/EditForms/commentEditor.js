@@ -21,9 +21,10 @@ let CommentEditor = (props) => {
 
     return (
         <div className="editor-container">
-            <p>{comment}</p>
+            <div className="limited-width">{comment}</div>
             {display ? <div className="editor">
                 <input
+                    className="width-input"
                     onChange={handleChange}
                     value={props.zayavka.comment}
                     type="text"

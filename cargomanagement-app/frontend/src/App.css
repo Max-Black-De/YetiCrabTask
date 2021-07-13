@@ -1,19 +1,30 @@
-.inputForm {
-  width: 30%;
-}
 
-.library {
-  width: 55%
-}
 
 .App {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  /* justify-content: center; */
-  font-size: calc(10px + 2vmin);
+  font-size: calc(6px + 2vmin);
   color: white;
+  position: relative;
+}
+
+.zayavka-number {
+  display: inline-grid;
+}
+
+.curentTime,
+.name-of-client,
+.name-of-carrier,
+.phone-of-carrier,
+.comment-for-zayavka,
+.ati-cod-of-carrier {
+  display: grid;
+  margin: 6px 0 6px 0;
+}
+
+a {
+  color: #fff;
 }
 
 button {
@@ -21,12 +32,51 @@ button {
   height: 31px;
 }
 
-
-.client-name {
-  display: flex;
+.btn-add-zayavka{
+  width: 150px;
+  height: 31px;
+  background-color: rgb(90, 168, 151);
 }
+
+.btn-delete {
+  margin-top: 15px;
+}
+
+.input-container {
+  border-right: 3px solid gray;
+  padding: 50px 35px 0 50px;
+  position: fixed;
+  height: 100%;
+}
+
+.main-list {
+  background-image: url(./img/cargo.jpg);
+  background-attachment: fixed;
+  margin-left: 425px;
+  padding-bottom: 25px;
+  padding-left: 15px;
+  width: 67%;
+}
+
+.wrapper {
+  margin-top: 10px;
+  padding: 15px;
+  border: 2px solid firebrick;
+  background-color: rgba(0, 0, 0, 0.192);
+}
+
 
 .editor-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin: 5px 0 3px 0;
+}
+
+.limited-width {
+  width: 500px;
+}
+
+.width-input {
+  width: 300px;
 }
