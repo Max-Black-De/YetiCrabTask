@@ -3,12 +3,23 @@ import React from 'react';
 import InputForm from './components/InputForm';
 import Zayavka from './components/zayavka';
 
-
 class App extends React.Component {
 
   state = {
     form: {
     }
+  }
+
+  componentDidMount() {
+    const zayavka = 'zayavka';
+    const localStorageRef = localStorage.getItem(zayavka);
+    if (localStorageRef) {
+      this.setState({ form: JSON.parse(localStorageRef) })
+    }
+  }
+
+  componentDidUpdate() {
+    localStorage.setItem('zayavka', JSON.stringify(this.state.form));
   }
 
   addZayavka = zayavka => {
@@ -21,7 +32,6 @@ class App extends React.Component {
     const form = { ...this.state.form };
     form[key] = updatedZayavka;
     this.setState({ form });
-
   }
 
   deleteForm = (key) => {
@@ -33,7 +43,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-          <InputForm addZayavka={this.addZayavka} />
+          <InputForm
+          addZayavka={this.addZayavka} />
         <div
             className="main-list">
           {Object.keys(this.state.form).map(key => {
@@ -50,7 +61,7 @@ class App extends React.Component {
                 </div>
                 <div className="editor-container">
                   <button
-                    onClick={() => this.deleteForm(key)}
+                    onClick={() => this.deleteForm(key)} 
                     className="btn-delete">Удалить</button>
                 </div>
               </div>

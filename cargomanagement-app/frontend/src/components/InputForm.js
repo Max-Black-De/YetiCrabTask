@@ -20,9 +20,10 @@ class InputForm extends React.Component {
       comment: this.newElementComment.current.value,
       atiCode: this.newElementAti.current.value
     }
-    this.props.addZayavka(zayavka)
+    this.props.addZayavka(zayavka);
     event.currentTarget.reset()
   }
+
 
   render() {
     return (
